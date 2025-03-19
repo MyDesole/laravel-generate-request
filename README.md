@@ -67,13 +67,13 @@ php artisan request:make User UserStoreRequest store --only-custom
 Вы можете указать правила валидации непосредственно в модели. Для этого добавьте методы getStoreFields, getUpdateFields или getDeleteFields.
 
 #### Пример модели:
-namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class User extends Model
-{
-protected $fillable = ['name', 'email', 'password'];
+    {
+    namespace App\Models;
+    
+    use Illuminate\Database\Eloquent\Model;
+    
+    class User extends Model { protected $fillable = ['name', 'email', 'password'];
 
     public function getStoreFields()
     {
@@ -106,20 +106,20 @@ protected $fillable = ['name', 'email', 'password'];
 
 #### Результат:namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class UserStoreRequest extends FormRequest
-{
-public function rules()
-{
-return [
-'email' => ['required', 'email', 'unique:users,email'],
-'name' => ['required', 'string', 'max:255'],
-'password' => ['required', 'string', 'min:8'],
-'custom_field' => ['string', 'max:100'],
-];
-}
-}
+    use Illuminate\Foundation\Http\FormRequest;
+    
+    class UserStoreRequest extends FormRequest
+        {
+            public function rules()
+            {
+            return [
+                    'email' => ['required', 'email', 'unique:users,email'],
+                    'name' => ['required', 'string', 'max:255'],
+                    'password' => ['required', 'string', 'min:8'],
+                    'custom_field' => ['string', 'max:100'],
+                ];
+            }
+        }
 
 ---
 
