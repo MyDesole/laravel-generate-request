@@ -2,7 +2,6 @@
 
 namespace desole\MakeRequest\Commands;
 
-use App\Models\User\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;

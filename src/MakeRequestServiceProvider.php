@@ -4,7 +4,8 @@ namespace desole\MakeRequest;
 
 use Illuminate\Support\ServiceProvider;
 use desole\MakeRequest\Commands\MakeRequest;
-class MakeRequestServiceProvider
+
+class MakeRequestServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -13,8 +14,5 @@ class MakeRequestServiceProvider
         ]);
     }
 
-    public function boot()
-    {
-        // Публикация конфигураций, миграций и т.д. (опционально)
-    }
+
 }
