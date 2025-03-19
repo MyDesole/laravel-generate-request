@@ -21,7 +21,7 @@ composer require desole/laravel-make-request
 php artisan request:make {Model} {Name} {Type} {--only-custom}
 
 #### Параметры:
-- `Model` (обязательный): Имя модели, на основе которой будет создан FormRequest класс. Модель должна иметь заполняемые поля (`$fillable`).
+- `Model` (обязательный): Имя модели, на основе которой будет создан FormRequest класс. Модель должна иметь заполняемые поля (`$fillable`). Модель ищется в папке App/Models 
 - `Name` (обязательный): Имя создаваемого FormRequest класса. Например, UserStoreRequest.
 - `Type` (опциональный): Тип FormRequest класса. Возможные значения:
     - store — поля из метода getStoreFields модели.
