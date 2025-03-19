@@ -10,8 +10,11 @@ Artisan-команда для автоматической генерации Fo
 
 ## Установка
 
-Установите пакет через Composer:
-composer require desole/laravel-make-request
+Установите пакет через Composer:  
+``` bash 
+composer require desole/laravel-generate-request
+
+```
 
 ---
 
