@@ -1,0 +1,30 @@
+{
+  "name": "desole/laravel-generate-request",
+  "description": "A Laravel command to generate Request classes with validation rules.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nikita Kolygin",
+      "email": "n-kolygin@mail.ru"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "laravel/framework": "^9.0 || ^10.0 || ^11.0 || ^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "desole\\MakeRequest\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "desole\\MakeRequest\\MakeRequestServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
