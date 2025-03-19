@@ -3,7 +3,7 @@
 namespace desole\MakeRequest;
 
 use Illuminate\Support\ServiceProvider;
-use YourVendor\MakeRequest\Commands\MakeRequest;
+use desole\MakeRequest\Commands\MakeRequest;
 class MakeRequestServiceProvider
 {
     public function register()
