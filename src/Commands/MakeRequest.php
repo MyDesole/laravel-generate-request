@@ -73,7 +73,7 @@ class MakeRequest extends Command
         $model = new $modelClass;
 
         $customRulesMethod = 'get' . ucfirst($type) . 'Fields';
-        $customRules = method_exists($model, $customRulesMethod) ? $model->{$customRulesMethod}() : [];
+        $customRules = method_exists($model, $customRulesMethod) ? $model->{$customRulesMethod}() : $model->getFillable();
 
         $tableName = $model->getTable();
         $schemaName = config('database.connections.' . config('database.default') . '.database');
@@ -226,6 +226,9 @@ class MakeRequest extends Command
                 continue;
             }
 
+			if ($type === 'none' && !in_array($fieldName, $model->getFillable())) {
+				continue;
+			}
 
             $rules = [];
 
